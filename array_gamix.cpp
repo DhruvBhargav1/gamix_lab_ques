@@ -273,6 +273,7 @@ int main() {
 */
 
 //2d array
+/*
 #include<iostream>
 #include<climits>
 using namespace std;
@@ -306,3 +307,142 @@ int maxelement(int arr[][3],int row,int col){
  //for printing
 cout<<maxelement(arr,4,3);
 }
+*/
+
+
+
+//greatest comman factor
+/*
+#include<iostream>
+using namespace std;
+int gcf(int n,int m){
+    int size;
+    int hcf=1;
+    if(n>m){
+     size=n;
+    }
+    else{
+        size=m;
+    }
+for(int i=1;i<=size;i++){
+    if(n%i==0 && m%i==0){
+        hcf= i;
+    }
+
+}
+return hcf;
+
+}
+int main(){
+    int n,m;
+    cout<<"enter no"<<endl;
+    cin>>n;
+    cout<<" second"<<endl;;
+    cin>>m;
+    cout<<gcf(n,m);
+
+}
+*/
+
+
+//max sum of row in matrix
+/*
+#include<iostream>
+using namespace std;
+int maxsum(int arr[][3],int row,int col){
+    int maxcount=INT16_MIN;
+    for(int i=0;i<row;i++){
+        int currsum=0;
+        for(int j=0;j<col;j++){
+            currsum+=arr[i][j];
+            
+        }
+        if(currsum>maxcount){
+            maxcount=currsum;
+        }
+    }
+    return maxcount;
+}
+int main(){
+    int arr[3][3]={{1,2,30},{4,5,6},{7,8,9}};
+    cout<<maxsum(arr,3,3);
+}*/
+
+
+//rotate 2d matrix 90 degree
+/*
+#include<iostream>
+using namespace std;
+int rotate(int arr[][3],int row,int col,int n){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            arr[j][n-1-i]=arr[i][j];
+        }
+    }
+}
+int printmatrix(int arr[][3],int row,int col){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+int main(){
+    int arr[3][3]={{1,2,30},{4,5,6},{7,8,9}};
+    rotate(arr,3,3,3);
+    printmatrix(arr,3,3);
+
+
+}
+
+    */
+
+    //tranpose of 2d matrix
+    /*
+   #include<iostream>
+   using namespace std;
+
+   int transpose(int arr[][3],int row,int col){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            arr[i][j]=arr[j][i];
+        }
+    }
+}
+int printmatrix(int arr[][3],int row,int col){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+    int main(){
+        int arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+        transpose(arr,3,3);
+        printmatrix(arr,3,3);
+    
+    
+
+    }
+*/
+//sum of all element in 2d array
+/*
+#include<iostream>
+   using namespace std;
+
+   int transpose(int arr[][3],int row,int col){
+    int sum=0;
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            sum+=arr[i][j];
+        }
+    }
+    return sum;
+}
+int main(){
+    int arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+     cout<<transpose(arr,3,3);
+}
+*/
